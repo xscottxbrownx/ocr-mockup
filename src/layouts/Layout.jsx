@@ -20,7 +20,9 @@ export default function Layout() {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Fab color="primary" style={style} aria-label="scroll back to top">
         <a href="#top" style={{ color: "white" }}>
           <KeyboardArrowUpIcon />
