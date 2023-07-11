@@ -11,7 +11,7 @@ export default function CallToAction2() {
   return (
     <Box
       sx={{
-        minHeight: "30rem",
+        minHeight: "40rem",
         width: "100vw",
         padding: "3rem 10rem",
         textAlign: "center",
@@ -36,10 +36,10 @@ export default function CallToAction2() {
             </Typography>
             <Typography variant="h5" component="p" mt={2} textAlign="center">
               Getting Rugged? Challenge accepted! The course is designed so you
-              can choose your own destiny and difficulty – whether that’s
-              traversing over every obstacle at blistering speeds or skipping
-              one when you need to – victory awaits at the finish line no matter
-              what.
+              can choose your own destiny and difficulty &#8208; whether
+              that&apos;s traversing over every obstacle at blistering speeds or
+              skipping one when you need to &#8208; victory awaits at the finish
+              line no matter what.
             </Typography>
           </Box>
           <Box
@@ -57,10 +57,11 @@ export default function CallToAction2() {
             <Typography variant="h5" component="p" mt={2} textAlign="center">
               This year, we are offering a Muddy Back Guarantee – where we
               guarantee everyone who participates will get muddier than any
-              Rugged Maniac event they’ve ever attended! If you don’t get muddy,
-              we’ll get you covered. Let our staff know and you’ll be
-              automatically upgraded to Rugged Maniac X on race day (meaning you
-              can run the event again, and track through even more mud!).
+              Rugged Maniac event they&apos;ve ever attended! If you don&apos;t
+              get muddy, we&apos;ll get you covered. Let our staff know and
+              you&apos;ll be automatically upgraded to Rugged Maniac X on race
+              day (meaning you can run the event again, and track through even
+              more mud!).
             </Typography>
           </Box>
         </Stack>

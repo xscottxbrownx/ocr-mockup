@@ -23,11 +23,12 @@ export default function CallToAction() {
         MUDDY ADVENTURE AWAITS AT RUGGED MANIAC 2023
       </Typography>
       <Typography variant="body1" color="white" mb={8}>
-        Rugged Maniac returns for 2023 with our muddiest year yet! We’re
+        Rugged Maniac returns for 2023 with our muddiest year yet! We&apos;re
         renewing our muddy vows, going back to the nitty gritty basics, and
-        shouting our love for mud from the mountain tops. In fact, we’re
-        unleashing both the World’s Largest Mud Pit and a “Muddy Back Guarantee”
-        to ensure the most epic day of muddy glory. You won’t want to miss this!
+        shouting our love for mud from the mountain tops. In fact, we&apos;re
+        unleashing both the World&apos;s Largest Mud Pit and a “Muddy Back
+        Guarantee” to ensure the most epic day of muddy glory. You won&apos;t
+        want to miss this!
       </Typography>
       <Button
         variant="contained"
