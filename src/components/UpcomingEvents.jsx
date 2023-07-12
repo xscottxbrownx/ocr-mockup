@@ -10,8 +10,10 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 // Component Imports
 import EventCard from "./EventCard";
+import LOCATIONS from "../constants/LocationsList";
 
 export default function UpcomingEvents() {
+  const firstThreeEvents = LOCATIONS.slice(0, Math.min(LOCATIONS.length, 3));
   return (
     <Box
       sx={{
@@ -33,24 +35,15 @@ export default function UpcomingEvents() {
           my={6}
           sx={{ justifyContent: "space-between" }}
         >
-          <EventCard
-            imageSrc="my-image.png"
-            location="Portland"
-            date="July 15"
-            blurb="The city of endless nicknames - PDX, Rose City, Rip City, Bridge City, Stumptown..."
-          />
-          <EventCard
-            imageSrc="my-image.png"
-            location="Seattle"
-            date="July 29"
-            blurb="The mud is thicker here in this city along the Puget Sound."
-          />
-          <EventCard
-            imageSrc="my-image.png"
-            location="Vancouver, BC"
-            date="August 12"
-            blurb="Come join us across the border!"
-          />
+          {firstThreeEvents.map((location) => (
+            <EventCard
+              key={location.id}
+              imageSrc={location.image}
+              location={location.name}
+              date={location.date}
+              blurb={location.blurb}
+            />
+          ))}
           {/* <Button
             variant="contained"
             component={RouterLink}
