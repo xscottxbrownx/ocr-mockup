@@ -34,19 +34,19 @@ export default function UpcomingEvents() {
           sx={{ justifyContent: "space-between" }}
         >
           <EventCard
-            imageSrc=""
+            imageSrc="my-image.png"
             location="Portland"
             date="July 15"
             blurb="The city of endless nicknames - PDX, Rose City, Rip City, Bridge City, Stumptown..."
           />
           <EventCard
-            imageSrc=""
+            imageSrc="my-image.png"
             location="Seattle"
             date="July 29"
             blurb="The mud is thicker here in this city along the Puget Sound."
           />
           <EventCard
-            imageSrc=""
+            imageSrc="my-image.png"
             location="Vancouver, BC"
             date="August 12"
             blurb="Come join us across the border!"
