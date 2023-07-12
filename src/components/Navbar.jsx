@@ -15,10 +15,8 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-
-const drawerWidth = 240;
-
-const navItems = ["Locations", "Obstacles", "Volunteer", "About", "FAQ"];
+// Component Imports
+import ROUTES from "../constants/Navlinks";
 
 export default function DrawerAppBar({ window }) {
   // Drawer State
@@ -35,7 +33,7 @@ export default function DrawerAppBar({ window }) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {ROUTES.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
@@ -63,7 +61,7 @@ export default function DrawerAppBar({ window }) {
           </NavLink>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "block" } }}>
-            {navItems.map((item) => {
+            {ROUTES.map((item) => {
               const currentRoute = useLocation().pathname.includes(item);
               return (
                 <NavLink
@@ -105,7 +103,7 @@ export default function DrawerAppBar({ window }) {
             display: { xs: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: "240px",
             },
           }}
         >
