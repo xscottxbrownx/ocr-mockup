@@ -24,10 +24,13 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
-      <Fab color="primary" style={style} aria-label="scroll back to top">
-        <a href="#top" style={{ color: "white" }}>
-          <KeyboardArrowUpIcon />
-        </a>
+      <Fab
+        color="primary"
+        style={style}
+        aria-label="scroll back to top"
+        href="#top"
+      >
+        <KeyboardArrowUpIcon />
       </Fab>
       <Newsletter />
       <Footer />
