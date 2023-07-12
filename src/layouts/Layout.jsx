@@ -6,6 +6,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 // Component Imports
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Newsletter from "../components/Newsletter";
 
 const style = {
   margin: 0,
@@ -28,6 +29,7 @@ export default function Layout() {
           <KeyboardArrowUpIcon />
         </a>
       </Fab>
+      <Newsletter />
       <Footer />
     </>
   );
