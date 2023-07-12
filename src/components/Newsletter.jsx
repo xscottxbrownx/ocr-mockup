@@ -34,7 +34,7 @@ export default function Newsletter() {
               justifyContent: "center",
             }}
           >
-            <Typography variant="h4" color="#DFDFDF">
+            <Typography variant="h4" color="white">
               STAY CONNECTED
             </Typography>
             <Typography variant="body1" color="#DFDFDF">
@@ -46,15 +46,9 @@ export default function Newsletter() {
             type="email"
             variant="outlined"
             label="Enter Email"
-            // helperText="*By entering my email address, I agree to the terms and policy"
             color="secondary"
             margin="normal"
-            sx={{
-              width: "400px",
-              // backgroundColor: "#5D1810",
-              // border: "2px solid",
-              // borderColor: "black",
-            }}
+            sx={{ width: "400px" }}
           />
 
           <Button
@@ -66,7 +60,6 @@ export default function Newsletter() {
               width: "200px",
               backgroundColor: "#DFDFDF",
               color: "black",
-              // px: "2rem",
             }}
           >
             SUBMIT
