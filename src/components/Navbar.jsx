@@ -51,7 +51,7 @@ export default function DrawerAppBar({ window }) {
 
   return (
     <>
-      <AppBar component="nav" sx={{ py: 2 }}>
+      <AppBar component="nav">
         <Toolbar>
           <NavLink
             to="/Home"
