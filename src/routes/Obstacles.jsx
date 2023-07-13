@@ -1,4 +1,11 @@
+// Material UI Imports
 import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+// Component Imports
+import PageTitle from "../components/PageTitle";
+import OBSTACLES from "../constants/ObstacleList";
+import ObstacleCard from "../components/ObstacleCard";
 
 export default function Obstacles() {
   return (
@@ -7,12 +14,28 @@ export default function Obstacles() {
         minHeight: "100vh",
         width: "100vw",
         backgroundColor: "tertiary.main",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        textAlign: "center",
+        paddingTop: "7rem",
       }}
     >
-      <h2>OBSTACLES PAGE</h2>
+      <PageTitle title="obstacles" />
+      <Container>
+        <Stack
+          direction="row"
+          spacing={2}
+          my={6}
+          sx={{ justifyContent: "space-between" }}
+        >
+          {OBSTACLES.map((obstacle) => {
+            <ObstacleCard
+              key={obstacle.id}
+              name={obstacle.name}
+              imageSrc={obstacle.image}
+              blurb={obstacle.blurb}
+            />;
+          })}
+        </Stack>
+      </Container>
     </Box>
   );
 }

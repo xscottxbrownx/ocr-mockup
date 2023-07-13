@@ -1,4 +1,9 @@
+// Material UI Imports
 import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+// Component Imports
+import PageTitle from "../components/PageTitle";
 
 export default function Volunteer() {
   return (
@@ -7,12 +12,14 @@ export default function Volunteer() {
         minHeight: "100vh",
         width: "100vw",
         backgroundColor: "tertiary.main",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        textAlign: "center",
+        paddingTop: "7rem",
       }}
     >
-      <h2>VOLUNTEER PAGE</h2>
+      <PageTitle title="volunteer" />
+      <Container>
+        <Typography variant="h4">STUFF</Typography>
+      </Container>
     </Box>
   );
 }
