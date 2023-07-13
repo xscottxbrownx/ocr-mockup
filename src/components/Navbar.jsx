@@ -1,7 +1,8 @@
 // React Imports
 import { useState } from "react";
+import PropTypes from "prop-types";
 // React Router Imports
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // Material UI Imports
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -10,13 +11,11 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 // Component Imports
-import ROUTES from "../constants/Navlinks";
+import ROUTES from "../constants/NavlinkList";
 
 export default function DrawerAppBar({ window }) {
   // Drawer State
@@ -27,17 +26,47 @@ export default function DrawerAppBar({ window }) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        RACE LOGO
-      </Typography>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", marginTop: "3rem" }}
+    >
+      <NavLink
+        to="/Home"
+        style={({ isActive }) => {
+          return {
+            fontWeight: isActive ? "bold" : "",
+            color: isActive ? "red" : "black",
+            textDecoration: "none",
+          };
+        }}
+      >
+        <Typography variant="h6">RACE LOGO</Typography>
+      </NavLink>
       <Divider />
       <List>
         {ROUTES.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+          <ListItem
+            key={item}
+            disablePadding
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "15px",
+            }}
+          >
+            <NavLink
+              key={item}
+              to={`/${item}`}
+              style={({ isActive }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  color: isActive ? "red" : "black",
+                  textDecoration: "none",
+                };
+              }}
+            >
+              {item}
+            </NavLink>
           </ListItem>
         ))}
       </List>
@@ -62,16 +91,17 @@ export default function DrawerAppBar({ window }) {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             {ROUTES.map((item) => {
-              const currentRoute = useLocation().pathname.includes(item);
               return (
                 <NavLink
                   key={item}
                   to={`/${item}`}
-                  style={{
-                    fontWeight: currentRoute ? "bold" : "",
-                    color: currentRoute ? "black" : "white",
-                    textDecoration: "none",
-                    margin: "0 10px",
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "black" : "white",
+                      textDecoration: "none",
+                      margin: "0 10px",
+                    };
                   }}
                 >
                   {item}
@@ -113,3 +143,5 @@ export default function DrawerAppBar({ window }) {
     </>
   );
 }
+
+DrawerAppBar.propTypes = { window: PropTypes.object };

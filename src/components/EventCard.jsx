@@ -1,12 +1,13 @@
 // Material UI Imports
 import Card from "@mui/material/Card";
+import { CardActionArea } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Chip from "@mui/material/Chip";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 // Material Image Imports
 import Image from "mui-image";
+import PropTypes from "prop-types";
 
 export default function EventCard({ imageSrc, location, date, blurb }) {
   return (
@@ -36,3 +37,10 @@ export default function EventCard({ imageSrc, location, date, blurb }) {
     </Card>
   );
 }
+
+EventCard.propTypes = {
+  imageSrc: PropTypes.string,
+  location: PropTypes.string,
+  date: PropTypes.string,
+  blurb: PropTypes.string,
+};
