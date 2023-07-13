@@ -11,7 +11,7 @@ import {
 } from "react-icons/bi";
 import { IconContext } from "react-icons";
 // Component Imports
-import ROUTES from "../constants/Navlinks";
+import ROUTES from "../constants/NavlinkList";
 
 export default function Footer() {
   const theme = useTheme();

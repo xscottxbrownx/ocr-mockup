@@ -12,7 +12,7 @@ export default function Newsletter() {
     <Box
       sx={{
         backgroundColor: "#BA2F1F",
-        minHeight: "10rem",
+        minHeight: "7rem",
         width: "100vw",
         display: "flex",
         alignItems: "center",

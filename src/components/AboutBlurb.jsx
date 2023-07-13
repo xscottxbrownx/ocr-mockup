@@ -3,8 +3,8 @@ import { Link as RouterLink } from "react-router-dom";
 // Material UI Imports
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
-import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
@@ -15,18 +15,18 @@ export default function AboutBlurb() {
   return (
     <Box
       sx={{
-        minHeight: "30rem",
+        minHeight: "35rem",
         width: "100vw",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "tertiary.main",
-        padding: "3rem 10rem",
+        padding: "3rem",
         textAlign: "center",
       }}
     >
-      <Box>
+      <Container>
         <Typography variant="h3" component="h2" color="secondary">
           WHAT IS RUGGED MANIAC?
         </Typography>
@@ -74,7 +74,7 @@ export default function AboutBlurb() {
             </Button>
           </Box>
         </Stack>
-      </Box>
+      </Container>
     </Box>
   );
 }

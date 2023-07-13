@@ -17,9 +17,9 @@ export default function UpcomingEvents() {
   return (
     <Box
       sx={{
-        minHeight: "40rem",
+        minHeight: "35rem",
         width: "100vw",
-        padding: "3rem 10rem",
+        padding: "3rem",
         textAlign: "center",
         backgroundColor: "tertiary.main",
       }}
@@ -35,15 +35,18 @@ export default function UpcomingEvents() {
           my={6}
           sx={{ justifyContent: "space-between" }}
         >
-          {firstThreeEvents.map((location) => (
-            <EventCard
-              key={location.id}
-              imageSrc={location.image}
-              location={location.name}
-              date={location.date}
-              blurb={location.blurb}
-            />
-          ))}
+          {firstThreeEvents.map((location) => {
+            const { id, image, name, date, blurb } = location;
+            return (
+              <EventCard
+                key={id}
+                imageSrc={image}
+                location={name}
+                date={date}
+                blurb={blurb}
+              />
+            );
+          })}
           {/* <Button
             variant="contained"
             component={RouterLink}

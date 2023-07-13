@@ -1,5 +1,6 @@
 // Material UI Imports
 import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 // Material UI Imports
@@ -11,13 +12,13 @@ export default function CallToAction2() {
   return (
     <Box
       sx={{
-        minHeight: "40rem",
+        minHeight: "35rem",
         width: "100vw",
-        padding: "3rem 10rem",
+        padding: "3rem",
         textAlign: "center",
       }}
     >
-      <Box>
+      <Container>
         <Stack
           direction="row"
           divider={<Divider orientation="vertical" flexItem />}
@@ -65,7 +66,7 @@ export default function CallToAction2() {
             </Typography>
           </Box>
         </Stack>
-      </Box>
+      </Container>
     </Box>
   );
 }
